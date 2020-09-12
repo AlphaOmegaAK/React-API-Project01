@@ -4,10 +4,9 @@ const app = express();
 
 //  ----- Config -----
 require('dotenv').config();
+const routes = require('./routes');
 
-app.get('/', (req, res) => {
-    res.send("<h1>This is a Test...</h1>")
-})
+app.use('/', routes.base);
 
 // PORT + Listener
 const PORT = process.env.PORT || 5000;
