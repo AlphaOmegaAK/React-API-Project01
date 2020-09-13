@@ -15,4 +15,6 @@ mongoose.connect(connectString, configObj)
 
 module.exports = {
     //! Models Here
+    User: require('./User'),
+    Post: require('./Post'),
 }
